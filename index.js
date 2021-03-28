@@ -16,6 +16,10 @@ app.use(cors());
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
+app.get('/',(req,res) => {
+    res.send('Welcome to BackEnd');
+})
+
 client.connect(err => {
   const productsCollection = client.db("emaJohnStore").collection("products"); //Products Collection In Database
   const ordersCollection = client.db("emaJohnStore").collection("orders"); // Ordered Collection in DataBase
