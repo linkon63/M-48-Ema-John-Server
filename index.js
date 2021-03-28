@@ -67,6 +67,4 @@ client.connect(err => {
 });
 
   
-app.listen(port, () => {
-  console.log(`Ema-John Server ${port}`)
-})
+app.listen(process.env.PORT || port)
